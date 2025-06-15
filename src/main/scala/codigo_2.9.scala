@@ -1,4 +1,4 @@
-@main def expressaBloco(): Unit =  
+@main def expressaoBloco(): Unit =  
     val result =
         val x = 10
         val y = 20
