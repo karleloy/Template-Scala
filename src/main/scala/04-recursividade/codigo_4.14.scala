@@ -6,5 +6,5 @@ def fibonacciNaive(n: BigInt): BigInt = {
 }
 
 @main def runFibonacciNaive(): Unit = {
-    println((0 until 47).map(n => fibonacciNaive(n)))
+    println((0 until 15).map(n => fibonacciNaive(n)))
 }
