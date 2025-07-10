@@ -1,4 +1,4 @@
-@main def hello(): Unit = 
+@main def hellou(): Unit = 
   println("Hello world!")
   println(msg)
 
