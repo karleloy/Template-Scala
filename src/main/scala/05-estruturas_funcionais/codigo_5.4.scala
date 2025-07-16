@@ -1,5 +1,3 @@
-//package `05-estruturas_funcionais`
-//Função recursiva na cauda para calcular o tamanho de uma lista
 def listSizeTailRec(xs: List[Any], acc: Int = 0): Int = {
     if (xs.isEmpty) acc
     else listSizeTailRec(xs.tail, acc + 1)
