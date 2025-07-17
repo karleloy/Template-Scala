@@ -1,10 +1,10 @@
-package `05-estruturas_funcionais`
+//package `05-estruturas_funcionais`
 
 //Função recursiva para calcular o tamanho de uma lista
 
 package listSize
 
-def listSize(xs: List[A]): Int = {
+def listSize[A](xs: List[A]): Int = {
     if (xs == Nil) 0
     else 1 + listSize(xs.tail)
 }
