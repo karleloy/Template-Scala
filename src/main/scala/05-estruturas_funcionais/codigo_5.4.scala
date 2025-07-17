@@ -9,4 +9,3 @@ def listSizeTailRec(xs: List[Any], acc: Int = 0): Int = {
     println(listSizeTailRec(List("a", "b")))
     println(listSizeTailRec(List()))
 }
-
