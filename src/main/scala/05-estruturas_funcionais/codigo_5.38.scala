@@ -3,8 +3,7 @@ package `05-estruturas_funcionais`
 //Implementação de uma pilha funcional com listas
 
 class ListStack[T](val elements: List[T], override val size: Int) extends Stack[T] {
-    def this() = ???1 def this() = this(List.empty[T], 0)
-
+    def this() = ???
     def this(elements: List[T]) = ???
     override def push(x: T): Stack[T] = ???
     override def pop: (Option[T], Stack[T]) = ???
