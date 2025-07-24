@@ -1,5 +1,6 @@
 package `05-estruturas_funcionais`
 
-//Implementação dos construtores secundários da pilha
-def this() = this(List.empty[T], 0)
-def this(elements: List[T]) = this(elements, elements.length)
+//Implementação das operações de consulta da pilha
+
+override def isEmpty: Boolean = elements.isEmpty
+override def toString: String = s"top -> (${elements.mkString(", ")})"

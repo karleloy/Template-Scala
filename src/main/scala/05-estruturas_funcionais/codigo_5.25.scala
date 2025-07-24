@@ -1,4 +1,7 @@
 package `05-estruturas_funcionais`
 
-//Definição de uma função de multiplicação
-def multiply(x: Int, y: Int): Int = x * y
+//Tentativa de composição insegura de funções
+
+def expression1(x: Int, y: Int, z: Int): Option[Int] = {
+    divide(x, y) + divide(x, z)
+}

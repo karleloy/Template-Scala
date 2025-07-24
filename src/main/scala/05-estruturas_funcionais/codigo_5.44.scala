@@ -1,8 +1,6 @@
 package `05-estruturas_funcionais`
 
-//Implementação da operação de desempilhamento
-
-override def pop: (Option[T], Stack[T]) = {
-    if (elements.isEmpty) (None, this)
-    else (Some(elements.head), new ListStack(elements.tail, size - 1))
-}
+private class ListStack[T] private (val elements: List[T], override val size: Int) extends Stack[T] {
+    private def this() = this(Nil, 0)
+    private def this(elements: List[T]) = this(elements, elements.size)
+    (...)

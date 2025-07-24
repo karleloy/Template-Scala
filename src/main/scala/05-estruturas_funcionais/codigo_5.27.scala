@@ -1,13 +1,15 @@
 package `05-estruturas_funcionais`
 
-//Composição segura de funções com Option
-def testSafeComposition(x: Int, y: Int, z: Int): Int = {
-    multiply(x, y) + divide(x, z).getOrElse(0)
+//Composição segura de funções com Option via padrão de flatMaps a map aninhados
+def expression4(x: Int, y: Int, z: Int): Option[Int] = {
+    divide(x, y).flatMap { quotient1 =>
+        divide(x, z).map { quotient2 =>
+            quotient1 + quotient2
+        }
+    }
 }
-@main def main(): Unit = {
-    val safeResult = testSafeComposition(10, 2, 2)
-    println(s"Safe composition result: $safeResult")
 
-    val safeResult2 = testSafeComposition(10, 2, 0)
-    println(s"Safe composition with division by zero: $safeResult2")
+@main def testExpression4(): Unit = {
+    println(expression4(10, 2, 3)) // Some(8)
+    println(expression4(10, 2, 0)) // None
 }
